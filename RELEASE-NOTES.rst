@@ -1,8 +1,8 @@
-=========================
- Invenio-CSL-REST v0.1.0
-=========================
+===========================
+ Invenio-CSL-REST v1.0.0a1
+===========================
 
-Invenio-CSL-REST v0.1.0 was released on TBD, 2016.
+Invenio-CSL-REST v1.0.0a1 was released on June 9th, 2016.
 
 About
 -----
@@ -19,7 +19,7 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-csl-rest==0.1.0
+   $ pip install invenio-csl-rest==1.0.0a1
 
 Documentation
 -------------

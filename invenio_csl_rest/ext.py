@@ -31,7 +31,6 @@ from citeproc_styles import get_all_styles
 from werkzeug.utils import cached_property
 
 from .version import __version__ as rest_api_version
-from .views import blueprint
 
 
 class _InvenioCSLRESTState(object):
@@ -72,7 +71,6 @@ class InvenioCSLREST(object):
 
     def init_app(self, app):
         """Flask application initialization."""
-        app.register_blueprint(blueprint)
         state = _InvenioCSLRESTState(app)
         app.extensions['invenio-csl-rest'] = state
         return state

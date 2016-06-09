@@ -59,8 +59,8 @@ setup_requires = [
 ]
 
 install_requires = [
-    'invenio-rest>=1.0.0a7'
-    # 'citeproc-py-styles>=0.1.0',
+    'citeproc-py-styles>=0.1.0',
+    'invenio-rest>=1.0.0a9',
 ]
 
 packages = find_packages()
