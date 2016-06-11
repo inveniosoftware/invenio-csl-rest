@@ -46,7 +46,7 @@ class _InvenioCSLRESTState(object):
         styles = get_all_styles()
         whitelist = self.app.config.get('CSL_STYLES_WHITELIST')
         if whitelist:
-            return {k: v for k, v in styles.iteritems() if k in whitelist}
+            return {k: v for k, v in styles.items() if k in whitelist}
         return styles
 
     @cached_property
@@ -59,7 +59,7 @@ class _InvenioCSLRESTState(object):
         In combination with the package version, we get a unique identifier for
         the content that is being served.
         """
-        return ":".join((rest_api_version, styles_version))
+        return u":".join((rest_api_version, styles_version))
 
 
 class InvenioCSLREST(object):

@@ -24,6 +24,7 @@
 """Views tests."""
 
 import json
+
 from flask import url_for
 
 
@@ -31,7 +32,7 @@ def test_styles_get(app, csl_styles):
     """Test get styles."""
     with app.test_client() as client:
         res = client.get(url_for('invenio_csl_rest.styles'))
-        data = json.loads(res.data)
+        data = json.loads(res.get_data(as_text=True))
 
         assert res.status_code == 200
 
@@ -48,7 +49,7 @@ def test_whitelist(app, csl_styles):
     app.config.update(CSL_STYLES_WHITELIST=['apa'])
     with app.test_client() as client:
         res = client.get(url_for('invenio_csl_rest.styles'))
-        data = json.loads(res.data)
+        data = json.loads(res.get_data(as_text=True))
 
         assert 'apa' in data
         assert 'American Psychological Association' in data['apa']

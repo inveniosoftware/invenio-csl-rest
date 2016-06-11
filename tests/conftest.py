@@ -29,10 +29,12 @@ from __future__ import absolute_import, print_function
 
 import pytest
 from flask import Flask
+
 from invenio_csl_rest import InvenioCSLREST
+from invenio_csl_rest.views import blueprint
 
 
-@pytest.fixture()
+@pytest.yield_fixture()
 def app():
     """Flask application fixture."""
     app = Flask('testapp')
@@ -40,11 +42,13 @@ def app():
         SERVER_NAME='localhost',
         TESTING=True
     )
-    InvenioCSLREST(app)
+    ext = InvenioCSLREST(app)
+    app.register_blueprint(blueprint)
 
-    ctx = app.app_context()
-    ctx.push()
-    return app
+    assert ext.content_version
+
+    with app.app_context():
+        yield app
 
 
 @pytest.fixture()
