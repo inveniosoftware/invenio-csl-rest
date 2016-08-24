@@ -59,6 +59,7 @@ setup_requires = [
 ]
 
 install_requires = [
+    'Flask>=0.11.1',
     'citeproc-py-styles>=0.1.0',
     'invenio-rest>=1.0.0a9',
 ]
