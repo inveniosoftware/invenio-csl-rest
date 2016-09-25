@@ -46,4 +46,4 @@ REST API for Citation Style Language styles.
 *This is an experimental developer preview release.*
 
 * Free software: GPLv2 license
-* Documentation: https://pythonhosted.org/invenio-csl-rest/
+* Documentation: https://invenio-csl-rest.readthedocs.io/

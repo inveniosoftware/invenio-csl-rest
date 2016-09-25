@@ -24,7 +24,7 @@ Installation
 Documentation
 -------------
 
-   http://pythonhosted.org/invenio-csl-rest/
+   http://invenio-csl-rest.readthedocs.io/
 
 Happy hacking and thanks for flying Invenio-CSL-REST.
 
