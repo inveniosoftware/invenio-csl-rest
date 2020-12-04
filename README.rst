@@ -25,8 +25,8 @@
  Invenio-CSL-REST
 ==================
 
-.. image:: https://img.shields.io/travis/inveniosoftware/invenio-csl-rest.svg
-        :target: https://travis-ci.org/inveniosoftware/invenio-csl-rest
+.. image:: https://github.com/inveniosoftware/invenio-csl-rest/workflows/CI/badge.svg
+        :target: https://github.com/inveniosoftware/invenio-csl-rest/actions
 
 .. image:: https://img.shields.io/coveralls/inveniosoftware/invenio-csl-rest.svg
         :target: https://coveralls.io/r/inveniosoftware/invenio-csl-rest
