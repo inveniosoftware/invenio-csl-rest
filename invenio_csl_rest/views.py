@@ -65,5 +65,6 @@ class StylesResource(ContentNegotiatedMethodView):
 
         return res
 
+
 styles_view = StylesResource.as_view('styles')
 blueprint.add_url_rule('/styles', view_func=styles_view)
